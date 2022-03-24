@@ -1,1 +1,1 @@
-# Competitive-Programming
+# Unversity Projects

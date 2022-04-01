@@ -1,0 +1,28 @@
+
+   Instructions
+
+    A calculator implemented by converting from infix to postfix
+    working by PEMDAS standard to calculate
+    
+    P Parentheses
+    E Exponents
+    M Multiplication
+    D Division
+    A Addition
+    S Subtraction
+    
+    form (left to right)
+    
+    also with containing -ve sign 
+    and all types of Parentheses () {} []
+    
+    with handling many input errors may occur
+    like this cases:
+      +4
+      5++4
+      (4-(5-6
+      D+3
+      5+
+      ][4+3]
+      5/0
+      0^0

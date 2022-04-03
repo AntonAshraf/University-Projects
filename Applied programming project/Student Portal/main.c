@@ -47,7 +47,6 @@ FILE *STnum;
 
 int main () {
 
-   //Start_screen();
    read_our_File();
 
   while (1) {
@@ -65,22 +64,6 @@ int main () {
   return 0;
 }
 
-void Start_screen() {
-  system("cls");
-  system("color 97");
-  char helloStr[] = "\n\n\n\n\n\n\t\t\t\t\tNames:  Omar Khaled 20105368\n\t\t\t\t\t\tKaren Hany 20104130\n\t\t\t\t\tArab Academy for Science and Technology\n\t\t\t\t\tEng. Omar Fayed";
-  for (int i = 0; i < strlen(helloStr); i++) {
-    if (helloStr[i] == '\n' || helloStr[i] == '\t') {
-      printf("%c", helloStr[i]);
-    }
-    else {
-      printf("%c", helloStr[i]);
-      Sleep(50);
-    }
-  }
-  getch();
-  system("color 87");
-}
 
 void Menu() {
   system ("cls");
@@ -89,7 +72,6 @@ void Menu() {
   printf ("\t\t< 3 > Numbers of students.\n\n");
   printf ("\t\t< 4 > GPA & Grades.\n\n");
   printf ("\t\t< e > Exit.\n\n");
-  printf ("\t\t< A > Sum of Matrix.\n\n"); 
   printf ("\t\tEnter option you want: ");
 }
 
@@ -106,10 +88,6 @@ void option (char o) {
     break;
   case '4':
     GPA_Grades_Menu();
-    break;
-  case 'a':
-  case 'A':
-    Array2D();
     break;
   case 'e':
   case 'E':
@@ -315,15 +293,15 @@ void add_student() {
       strcpy(student[N].Depatment,"Computer");
       fprintf(R,"Computer\n");
       comp++;
-    } else if (d == 2){
-      comm++;
-      fprintf(R,"Communication\n");
-      strcpy(student[N].Depatment,"Communication");
-    } else if (d == 3) {
+    } else if (d == 2) {
             fprintf(R,"Electric\n");
       strcpy(student[N].Depatment,"Electric");
       elec++;
-    }
+    }else if (d == 3){
+      comm++;
+      fprintf(R,"Communication\n");
+      strcpy(student[N].Depatment,"Communication");
+    } 
 
     printf("\n\tStudent Semster: ");
     scanf("%d",&student[N].semester);
@@ -420,40 +398,4 @@ void read_our_File() {
 void END_program() {
 
   exit(0);
-}
-
-void Array2D() {
-  system("cls");
-    int row_size,col_size;
-    //Get size of matrix
-    printf("\n\n\t\tEnter the row Size Of the Matrix:");
-    scanf("%d",&row_size);
-    printf("\t\tEnter the columns Size Of the Matrix:");
-    scanf("%d",&col_size);
-
-    int matrix[100][100];
-
-    //Taking input of the matrix
-    int i,j;
-    printf("\t\tEnter the Matrix Element: ");
-    for(i=0;i<row_size;i++)
-    {
-        for(j=0;j<col_size;j++)
-        {
-            scanf("%d",&matrix[i][j]);
-        }
-    }
-    //Calculate sum of given matrix Elements
-    int sum=0;
-    for(i=0;i<row_size;i++)
-    {
-        for(j=0;j<col_size;j++)
-        {
-            sum+=matrix[i][j];
-        }
-    }
-    //Display The Sum Of Given Matrix Elements
-    printf("\n\n\t\tSum of the Given Matrix Elements is: %d",sum);
-    getch();
-    Menu();
 }

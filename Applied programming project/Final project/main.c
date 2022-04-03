@@ -514,11 +514,12 @@ void Leap_year()
 
   int y;
   printf("\n\t\tEnter the year: ");
-  scanf("%d", &y);
+  scanf(" %d", &y);
   if (IsLeapYear(y))
   {
     Green();
     printf("\n\n\t\tYeaaah %d is Leap year!", y);
+    getch();
     return;
   }
   int x = GetNextLeapYear(y);
@@ -1199,7 +1200,7 @@ another_word:
     fscanf(ptr, "%s", words[i]);
   do
   {
-    randN = rand() % 1000;
+    randN = rand() % 185;
     strcpy(word, words[randN]);
 
   } while (strlen(word) < mn || strlen(word) > mx);
@@ -1207,7 +1208,7 @@ another_word:
   char original[100];
   char scrambled[100];
   char answer[100];
-
+  word[0] = tolower(word[0]);
   strcpy(original, word);
 
   strcpy(scrambled, original);
@@ -1218,7 +1219,7 @@ another_word:
   {
     printf("Unscramble the word: %s\n\n", scrambled);
     printf("Answer: ");
-    scanf("%s", answer);
+    scanf(" %s", answer);
     if (strcmp(answer, original) == 0)
     {
       Green();
@@ -1231,6 +1232,7 @@ another_word:
       Red();
       printf("\a\a\nTry again!\n\n");
       white();
+      printf ("%s",original);
     }
   } while (!game_over);
 

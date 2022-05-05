@@ -24,7 +24,7 @@ The program full built in pure C language with colorful text in console
 
 ## Project Map & Overview
 
-1. ##### <u>2D Arrays</u>
+1. ### <u>2D Arrays</u>
    
    Doing operations on matricies
    
@@ -34,7 +34,7 @@ The program full built in pure C language with colorful text in console
    
    3. **Mutiply** two Matrcies
 
-2. ##### <u>Applications</u>
+2. ### <u>Applications</u>
    
    1. <u>Check Leap Year</u>
       
@@ -58,7 +58,7 @@ The program full built in pure C language with colorful text in console
       
       - Binay to decimal
 
-3. #### <u>Games</u>
+3. ### <u>Games</u>
    
    1. ##### Snake
       

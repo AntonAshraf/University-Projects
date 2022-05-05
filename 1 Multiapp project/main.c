@@ -34,7 +34,7 @@ char c;
 int main()
 {
 
-  // welcome_screen();
+  welcome_screen();
 
   MainMenu();
 

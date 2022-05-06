@@ -23,7 +23,18 @@ The program full built in pure C language with colorful text in console
 ```
 
 ## Project Map & Overview
+[2D Arrays](#2d-arrays)
 
+[Applications](#applications)
+   - [Check Leap Year](#check-leap-year)
+   - [Digital clock](#digital-clock)
+   - [Difference Between two time Intervals](#difference-between-two-time-intervals)
+   - Decimal to Binary (vice verca)
+
+[Games](#games)
+   -  [Snake](#snake)
+   -  [Scramble Word](#scramble-word-game)
+ 
 1. ### <u>2D Arrays</u>
    
    Doing operations on matricies
@@ -36,13 +47,13 @@ The program full built in pure C language with colorful text in console
 
 2. ### <u>Applications</u>
    
-   1. <u>Check Leap Year</u>
+   1. ##### <u>Check Leap Year</u>
       
    ![check leap year](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/check%20leap%20year.png)
       
          You just enter the year and validate if it Leap year or not and if not tell you the upcoming Leap year
    
-   2. <u>Digital clock</u>
+   2. ##### <u>Digital clock</u>
       
    ![Digital clock](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Digital%20clock.png)
       
@@ -50,7 +61,7 @@ The program full built in pure C language with colorful text in console
       
            and Aslo the current Date with "day d month year" format
    
-   3. <u>Difference Between two time Intervals</u>
+   3. ##### <u>Difference Between two time Intervals</u>
       
    ![Difference in time](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/diffirence%20in%20time.png)
       
@@ -58,7 +69,7 @@ The program full built in pure C language with colorful text in console
       
            by entring time in *hour : minute : seconds*
    
-   4. <u>Decimal to binary (vice verca)</u>
+   4. ##### <u>Decimal to Binary (vice verca)</u>
       
             Converting decimal to binary *"Recursively"*
       
@@ -102,7 +113,7 @@ It is very creative map with + sign walls in the middle of the map
 
 -----------------
 
-   2. ##### Scramble Game
+   2. ##### Scramble word Game
 ![scramble game](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Scramble%20game.gif)
 
 This game create a random shuffled word and you have to guess the right order of the word until you get it right✅

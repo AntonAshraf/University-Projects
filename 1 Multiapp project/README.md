@@ -38,32 +38,38 @@ The program full built in pure C language with colorful text in console
    
    1. <u>Check Leap Year</u>
       
-      by entering the year and validate if it Leap year or not and if not tell you the upcoming Leap year
+   ![check leap year](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/check%20leap%20year.png)
+      
+         You just enter the year and validate if it Leap year or not and if not tell you the upcoming Leap year
    
    2. <u>Digital clock</u>
       
-      - This app preview the current Clock in 12 hour format 'AM - PM' with making a little beep every one minute
+   ![Digital clock](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Digital%20clock.png)
       
-      - and Aslo the current Date with *"day d month year"* format
+           This app preview the current Clock in 12 hour format 'AM - PM' with making a little beep every one minute
+      
+           and Aslo the current Date with "day d month year" format
    
    3. <u>Difference Between two time Intervals</u>
       
-      - Get the difference between starting and ending time
+   ![Difference in time](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/diffirence%20in%20time.png)
       
-      - by entring time in *hour : minute : seconds*
+           Get the difference between starting and ending time
+      
+           by entring time in *hour : minute : seconds*
    
    4. <u>Decimal to binary (vice verca)</u>
       
-      - Converting decimal to binary *"Recursively"*
+            Converting decimal to binary *"Recursively"*
       
-      - Binay to decimal
+            Binay to decimal
 
 3. ### <u>Games</u>
    
    1. ##### Snake
       
-      The game is created in a simple way than others with pretty changing colorful colors and 3 different levels of difficulty with saving the High score every time you play even after closing the program
-      
+      The game is created in a simple way than others with pretty changing colorful colors and 3 different levels of difficulty 
+      Saving the High score every time you play even after closing the program and read it again form _'HighScore.txt'_
       After each apple eaten
       
       - *10 pts earned*

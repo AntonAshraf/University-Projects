@@ -105,7 +105,8 @@ It is very creative map with + sign walls in the middle of the map
    2. ##### Scramble Game
 ![scramble game](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Scramble%20game.gif)
 
-- it also have three levels of difficulty based on the length of the word that read from _'words.txt'_ file
+This game create a random shuffled word and you have to guess the right order of the word until you get it right✅
+- It also have three levels of difficulty based on the length of the word that read from _'words.txt'_ file
    - Level 1 from 3 to 4 letters
    - Level 2 from 4 to 7 letters
    - Level 3 from 7 to 15 letters
@@ -113,5 +114,12 @@ It is very creative map with + sign walls in the middle of the map
 ## The END
 
 Thank you for reading the documetation of the project!
-we tried to make the code cleaned as possible and diffirent from others, hope to find that 
-you can also check the other projects I have created duirng university from [here](https://github.com/AntonAshraf/University-Projects)
+
+We tried to make the code cleaned as possible and diffirent from others, hope to find that, there was many more fun games and applications that we can add but we was limited by the time⏱️
+   - [ ] 2048 game
+   - [ ] Tic-Tac-Toe
+   - [ ] Dinosour offline game
+   - [ ] Connect 4
+   - [ ] Morse code (Translate and play sound)
+   
+You can also check the other projects I have created duirng university from [here](https://github.com/AntonAshraf/University-Projects)

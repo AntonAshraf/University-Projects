@@ -49,13 +49,13 @@ The program full built in pure C language with colorful text in console
    
    1. ##### <u>Check Leap Year</u>
       
-   ![check leap year](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/check%20leap%20year.png)
+   ![check leap year](https://github.com/AntonAshraf/Materials/blob/main/mutiapp/check%20leap%20year.png)
       
          You just enter the year and validate if it Leap year or not and if not tell you the upcoming Leap year
    
    2. ##### <u>Digital clock</u>
       
-   ![Digital clock](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Digital%20clock.png)
+   ![Digital clock](https://github.com/AntonAshraf/Materials/blob/main/mutiapp/Digital%20clock.png  )
       
            This app preview the current Clock in 12 hour format 'AM - PM' with making a little beep every one minute
       
@@ -63,7 +63,7 @@ The program full built in pure C language with colorful text in console
    
    3. ##### <u>Difference Between two time Intervals</u>
       
-   ![Difference in time](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/diffirence%20in%20time.png)
+   ![Difference in time](https://github.com/AntonAshraf/Materials/blob/main/mutiapp/diffirence%20in%20time.png)
       
            Get the difference between starting and ending time
       
@@ -91,20 +91,20 @@ The program full built in pure C language with colorful text in console
 
 ###### <u>First level</u> (Easy mode)
 
-![Easy mode snake](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Easy%20snake.gif)
+![Easy mode snake](https://github.com/AntonAshraf/Materials/blob/main/mutiapp/Easy%20snake.gif)
 
 - Snake can cross the edges and pass to the opposite side of the screen
 
 - Only dies when hit himself
 
 ###### <u>Second level</u> (Normal mode)
-![Normal mode snake](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Normal%20mode.gif)
+![Normal mode snake](https://github.com/AntonAshraf/Materials/blob/main/mutiapp/Normal%20mode.gif)
 - The edges of the map now is deadly
 
 - Every 50 pts (5 apples) new dead point in the map in RED
 
 ###### <u>Third level</u> (Hard mode)
-![Hard mode snake](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Hard%20mode.gif)
+![Hard mode snake](https://github.com/AntonAshraf/Materials/blob/main/mutiapp/Hard%20mode.gif)
 It is very creative map with + sign walls in the middle of the map
 
 - Edges and **Walls** of the map is deadly
@@ -114,7 +114,7 @@ It is very creative map with + sign walls in the middle of the map
 -----------------
 
    2. ##### Scramble word Game
-![scramble game](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Scramble%20game.gif)
+![scramble game](https://github.com/AntonAshraf/Materials/blob/main/mutiapp/Scramble%20game.gif)
 
 This game create a random shuffled word and you have to guess the right order of the word until you get it right✅
 - It also have three levels of difficulty based on the length of the word that read from _'words.txt'_ file

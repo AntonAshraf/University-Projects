@@ -62,7 +62,7 @@ The program full built in pure C language with colorful text in console
    
    1. ##### Snake
       
-      The game is created in a simple way than others with pretty changing colorful colors and 3 different levels of diffculty with saving the High score every time you play even after closing the program
+      The game is created in a simple way than others with pretty changing colorful colors and 3 different levels of difficulty with saving the High score every time you play even after closing the program
       
       After each apple eaten
       
@@ -74,20 +74,36 @@ The program full built in pure C language with colorful text in console
 
 ###### <u>First level</u> (Easy mode)
 
+![Easy mode snake](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Easy%20snake.gif)
+
 - Snake can cross the edges and pass to the opposite side of the screen
 
 - Only dies when hit himself
 
 ###### <u>Second level</u> (Normal mode)
-
+![Normal mode snake](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Normal%20mode.gif)
 - The edges of the map now is deadly
 
 - Every 50 pts (5 apples) new dead point in the map in RED
 
 ###### <u>Third level</u> (Hard mode)
-
-and it is very creative map with + sign walls in the middle of the map
+![Hard mode snake](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Hard%20mode.gif)
+It is very creative map with + sign walls in the middle of the map
 
 - Edges and **Walls** of the map is deadly
 
 - Every 50 pts (5 apples) new dead point in the map in RED
+
+   2. ##### Scramble Game
+![scramble game](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Scramble%20game.gif)
+
+- it also have three levels of difficulty based on the length of the word that read from _'words.txt'_ file
+   - Level 1 from 3 to 4 letters
+   - Level 2 from 4 to 7 letters
+   - Level 3 from 7 to 15 letters
+
+## The END
+
+Thank you for reading the documetation of the project!
+we tried to make the code cleaned as possible and diffirent from others, hope to find that 
+you can also check the other projects I have created duirng university from [here](https://github.com/AntonAshraf/University-Projects)

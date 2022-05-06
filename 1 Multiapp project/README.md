@@ -100,6 +100,8 @@ It is very creative map with + sign walls in the middle of the map
 
 - Every 50 pts (5 apples) new dead point in the map in RED
 
+-----------------
+
    2. ##### Scramble Game
 ![scramble game](https://github.com/AntonAshraf/Private-Codes/blob/main/Uploads/Scramble%20game.gif)
 

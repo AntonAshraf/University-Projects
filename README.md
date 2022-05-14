@@ -20,10 +20,25 @@ This repository containg many awsome blocks of code that I have learnt too much 
      
      - *Guess Scramble word Game*
 
-2. ###### [Student Portal]()
+2. ###### [Student Portal](https://github.com/AntonAshraf/University-Projects/tree/main/2%20Student%20Portal)
    
    - Program hold Student data and Analyze it with many Operations
      
-     - 
+     - Save student data in files
+     
+     - Preview Student data with ID
+     
+     - Get number of Students in specific Course
 
-3. ###### [Full Expression Calculator]()
+     - Get the heighest grade student
+
+3. ###### [Full Expression Calculator](https://github.com/AntonAshraf/University-Projects/tree/main/3%20Postfix%20Calculator)
+   - A calculator implemented by converting from infix to postfix working by PEMDAS standard to calculate
+      
+      - Full string input
+
+      - All types of parentheses
+
+      - Unary operator _-ve_
+
+      - Get acurrate result

@@ -25,6 +25,10 @@ struct iStack{
   }
 };
 
+bool isdigit (char c) {
+  return (c >= '0' && c <= '9' || c == '.');
+}
+
 int sz_opStack(char infix[]){
   int size = 0;
   for (int i = 0; i < strlen(infix); i++)                         // Read number of the operator
@@ -97,5 +101,6 @@ int fpop(iStack *s, float *item) {
   s->sp--;
   return 0;
 }
+
 
 #endif

@@ -23,7 +23,6 @@ bool Equal_bracket(cStack *st, char s[]);
 bool isOpenBracket(char c);
 bool isCloseBracket (char c);
 bool isoperator (char c);
-bool isdigit(char c);
 bool isBracket(char c);
 
 int main() {
@@ -136,7 +135,7 @@ int main() {
       // printf ("%d", outWithError);
       printf("\n\t\tThe postfix: %s\n\n",postfix);
     
-    ////////////////////////                      *Evaluation*                                   /////////////////////
+      ////////////////////////                      *Evaluation*                                   /////////////////////
 
       float deci, num;
       int real ,p;                                                               //p counter of the power of the digit
@@ -205,7 +204,8 @@ int main() {
 
       Green();
       printf ("\tThe answer of the equation is %.2f\n\n", result);
-    }
+    }else 
+      getch();
     offwhite();
     printf ("\n\n\tDo you have another Equation you want calculate? (1/0)  ");
     option = getch();
@@ -283,9 +283,6 @@ bool isCloseBracket (char c) {
 }
 bool isBracket (char c) {
   return (isCloseBracket(c) || isOpenBracket(c));
-}
-bool isdigit (char c) {
-  return (c >= '0' && c <= '9' || c == '.');
 }
 bool isoperator(char c) {
   return (c == '+' || c == '*' || c == '/' || c == '-' || c == '^' );

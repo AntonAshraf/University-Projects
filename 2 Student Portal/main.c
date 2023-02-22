@@ -233,7 +233,7 @@ void Top_student_in_Course () {
   int flag = 1;
   float mx = 0;
   printf("\t\tName: ");
-  scanf("%s",name);
+  scanf(" %[^\n]",name);
   printf("\n\t\tSemster: ");
   scanf("%d",&term);
   for (int i = 0; i < N; i++){

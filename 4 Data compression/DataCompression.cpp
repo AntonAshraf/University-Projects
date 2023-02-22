@@ -137,7 +137,7 @@ void generate_codes(treeNode *node, char code[], char *table[]){
 	generate_codes(node->right, string_cat(code, "1"), table);
 }
 
-void print_table(char *code_table){
+void print_table(char *code_table[]){
   
   for (int i = 0; i < 255; i++)
     if (code_table[i] != NULL) 
@@ -186,7 +186,7 @@ t	1
   generate_codes(Huff_root,tmp, hash_table);
 
   // print hash table
-  // print_table(hash_table);
+  print_table(hash_table);
   
   
 

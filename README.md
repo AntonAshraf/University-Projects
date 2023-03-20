@@ -42,3 +42,14 @@ This repository containg many awsome blocks of code that I have learnt too much 
       - Unary operator _-ve_
 
       - Get acurrate result
+      
+4. ###### [Car Parking System](https://github.com/MahmoudHanyFathalla/Car-parking-system)
+   - A university car parking system implemented in VHDL as a final project in digtal system design course
+     
+     - It is checked whether or not the car has a valid AAST ID or not.
+     - Ultra-Sonic Range sensors for each of the 50 parking spaces
+     - ID system for college students and staff
+     - Ticket system for guests (including payment system)
+     - Fire Sensor for emergencies
+     - Vendor Machine
+     - _ASM Diagram_

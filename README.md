@@ -6,7 +6,7 @@ This repository containg many awsome blocks of code that I have learnt too much 
 
 ## Overview about Projects
 
-1. ###### [Multi App & my First Project](https://github.com/AntonAshraf/University-Projects/blob/main/1%20Multiapp%20project) "Applied Programming"
+1. ###### [Multi App & my First Project](https://github.com/AntonAshraf/University-Projects/blob/main/1%20Multiapp%20project) "Applied Programming" __Term 3__
    
    - An awsome console app containg many options like 
      
@@ -20,7 +20,7 @@ This repository containg many awsome blocks of code that I have learnt too much 
      
      - *Guess Scramble word Game*
 
-2. ###### [Student Portal](https://github.com/AntonAshraf/University-Projects/tree/main/2%20Student%20Portal) "Applied Programming"
+2. ###### [Student Portal](https://github.com/AntonAshraf/University-Projects/tree/main/2%20Student%20Portal) "Applied Programming" __Term 3__
    
    - Program hold Student data and Analyze it with many Operations
      
@@ -32,7 +32,7 @@ This repository containg many awsome blocks of code that I have learnt too much 
 
      - Get the heighest grade student
 
-3. ###### [Full Expression Calculator](https://github.com/AntonAshraf/University-Projects/tree/main/3%20Postfix%20Calculator) "Data Structures"
+3. ###### [Full Expression Calculator](https://github.com/AntonAshraf/University-Projects/tree/main/3%20Postfix%20Calculator) "Data Structures" __Term 4__
    - A calculator implemented by converting from infix to postfix working by PEMDAS standard to calculate
       
       - Full string input
@@ -43,7 +43,7 @@ This repository containg many awsome blocks of code that I have learnt too much 
 
       - Get acurrate result
       
-4. ###### [Car Parking System](https://github.com/MahmoudHanyFathalla/Car-parking-system) "Digital System Design"
+4. ###### [Car Parking System](https://github.com/MahmoudHanyFathalla/Car-parking-system) "Digital System Design" __Term 5__
    - A university car parking system implemented in VHDL as a final project in digtal system design course
      
      - It is checked whether or not the car has a valid AAST ID or not.
@@ -54,7 +54,7 @@ This repository containg many awsome blocks of code that I have learnt too much 
      - Vendor Machine
      - _ASM Diagram_
 
-5. ###### [Bug Tracking System](https://github.com/AntonAshraf/BugTrackingSystem) "Object Oriented Programming"
+5. ###### [Bug Tracking System](https://github.com/AntonAshraf/BugTrackingSystem) "Object Oriented Programming" __Term 6__
     - A bug tracking system is a software application that helps developers track and manage bugs in their software.
 
       - Have 4 user roles (Developer - Tester - Project Manager - Admin)
@@ -64,3 +64,15 @@ This repository containg many awsome blocks of code that I have learnt too much 
       - Backend done by Maven Project
       - _Page Flow Diagram_
 
+6. ###### [Numerical Project](https://github.com/AntonAshraf/University-Projects/tree/main/5%20Numerical%20Methods) "Numerical Methods" __Term 7__
+   - A project that implements numerical methods to solve mathematical problems
+     
+     - Root finding methods
+     
+     - Interpolation methods
+     
+     - Numerical integration
+     
+     - Differential equations
+     
+     - Matrix operations

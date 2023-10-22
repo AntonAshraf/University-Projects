@@ -16,14 +16,14 @@ def fields_error():
     error_label.config(text="")
     info_label.config(text="")
 
-# Define the pattern to match "2x" in "2x^2"
+# Define the pattern to match "2x" in "2x^2" or "X" in x
 pattern = r'(\d+)[xX]'
 
 # Define the function for displaying the steps of iteration
 def show_steps(steps_text, msg):
   steps_window = tk.Toplevel(root)
   steps_window.title("Steps of Iteration")
-  steps_window.geometry("450x220")
+  steps_window.geometry("450x250")
 
   steps_label = Label(steps_window, text=msg, justify=LEFT)
   steps_label = Label(steps_window, text=steps_text, justify=LEFT)
@@ -91,14 +91,14 @@ def calculate_root():
   if method == "Bisection":
     result, error , msg , steps_text = bisection(f, a, b, float(tolerance), int(max_iterations))
   elif method == "False Position":
-    result, error, msg= false_position(f, a, b, float(tolerance), int(max_iterations), steps_text)
+    result, error, msg, steps_text = false_position(f, a, b, float(tolerance), int(max_iterations))
   elif method == "Secant":
-    result, error, msg = secant(f, a, b, float(tolerance), int(max_iterations), steps_text)
+    result, error, msg , steps_text = secant(f, a, b, float(tolerance), int(max_iterations))
   elif method == "Newton-Raphson":
-    result, error, msg = newton_raphson(f, a, float(tolerance), int(max_iterations), steps_text)
+    result, error, msg, steps_text = newton_raphson(f, a, float(tolerance), int(max_iterations))
   elif method == "Simple Fixed-Point Iteration":
     try:
-      result, error, msg  = simple_fixed_point_iteration(f, a, float(tolerance), int(max_iterations), steps_text)
+      result, error, msg , steps_text = simple_fixed_point_iteration(f, a, float(tolerance), int(max_iterations))
     except OverflowError:
       result_label.config(text="Overflow error: The result is too large", fg="red")
       error_label.config(text="")
@@ -159,7 +159,7 @@ expression_label = Label(root, text="Enter f(x):")
 expression_label.grid(row=3, column=1)
 expression_entry = Entry(root, width=35)
 expression_entry.grid(row=3, column=2)
-expression_entry.insert(0, "-2.2x^2 + 4x + 25")
+expression_entry.insert(0, "-2.3x^2 + 3x + 12")
 
 spacer_label = Label(root, text="")
 spacer_label.grid(row=4, column=0, columnspan=4)
@@ -213,7 +213,7 @@ info_label = Label(root, text="Note: The result is rounded to 6 decimal places."
 info_label.grid(row=13, column=1, columnspan=2)
 
 # Checkbox for displaying the steps of iteration
-check_var = tk.IntVar()
+check_var = tk.IntVar(value=1)
 check_button = Checkbutton(root, text="Show Steps of Iteration", variable=check_var)
 check_button.grid(row=15, column=3)
 

@@ -2,8 +2,8 @@ from tkinter import *
 
 def bisection(f, a, b, tolerance, max_iterations):
 
-  steps_text = "Steps of Iteration:\n"
-  steps_text += "n\t Xu\t Xm\t Xl\t F(Xu)\t F(Xm)\t F(Xl)\t error\n"
+  steps_text = "\nBisection Steps of Iteration:\n\n"
+  steps_text += "N\t Xu\t Xm\t Xl\t F(Xu)\t F(Xm)\t F(Xl)\t error\n\n"
   if f(a) * f(b) >= 0:
     error_msg = "The boundary values do not bracket the root.\n The function values at the boundary values are:\n f({}) = {} and f({}) = {}".format(a, f(a), b, f(b))
     return None, None, error_msg, steps_text

@@ -1,4 +1,5 @@
 def secant(f, x0, x1, tolerance, max_iterations):
+  
     steps_text = "\nSecant Steps of Iteration:\n\n"
     steps_text += "N\t Xn\t F(Xn)\n\n"
     

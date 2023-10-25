@@ -22,7 +22,7 @@ def on_method_change(*args, method_var, a_label, b_label, b_entry):
 def create_gui(root):
 
     root.title("Numerical Methods Calculator")
-    root.geometry("700x360")
+    root.geometry("700x400")
 
     # Create a grid layout
     root.grid()
@@ -88,7 +88,7 @@ def create_gui(root):
 
     # Calculate button
     calculate_button = Button(root, text="Calculate", command=lambda: [clear_results(result_label, error_label, info_label), calculate_root(
-        root, method_var, expression_entry, tolerance_entry, max_iterations_entry, a_entry, b_entry, result_label, error_label, info_label, check_var)])
+        root, method_var, expression_entry, tolerance_entry, max_iterations_entry, a_entry, b_entry, result_label, error_label, info_label, check_var, plot_var, clear_var)])
     calculate_button.grid(row=9, column=1, columnspan=2)
 
     spacer_label = Label(root, text="")
@@ -109,4 +109,24 @@ def create_gui(root):
         root, text="Show Steps of Iteration", variable=check_var)
     check_button.grid(row=15, column=3)
 
+    # Checkbox for plotting the method
+    plot_var = tk.IntVar(value=0)
+    plot_button = Checkbutton(root, text="Plot Method", variable=plot_var)
+    plot_button.grid(row=15, column=0)
+
+    # Checkbox for clearing the results
+    clear_var = tk.IntVar(value=1)
+    clear_button = Checkbutton(root, text="Clear Results", variable=clear_var)
+    clear_button.grid(row=15, column=2)
+
+    # Configure rows and columns to expand when window is resized
+    root.grid_rowconfigure(0, weight=1)
+    root.grid_rowconfigure(14, weight=1)
+    root.grid_columnconfigure(0, weight=1)
+    root.grid_columnconfigure(4, weight=1)
+
     root.mainloop()
+
+if __name__ == '__main__':
+    root = tk.Tk()
+    create_gui(root)

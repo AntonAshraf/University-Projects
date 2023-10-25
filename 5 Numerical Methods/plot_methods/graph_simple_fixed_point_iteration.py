@@ -24,7 +24,7 @@ def plot_simple_fixed_point_iteration(f, g, x0, max_iterations, tolerance):
         x1 = g(x0)
 
         # Print the iteration details
-        print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, f(x0) = {f(x0):.4f}")
+        # print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, f(x0) = {f(x0):.4f}")
 
         # Plot the estimate with a different color for each iteration
         color = cmap(iteration / max_iterations)
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     # Define the function
     f = lambda x: x**3 + 4*x**2 - 10
     g = lambda x: (10 - x**3)**0.5 / 2
-
+    # (10 - x^3)^0.5 /2
     # Set the initial guess
     x0 = 1
 

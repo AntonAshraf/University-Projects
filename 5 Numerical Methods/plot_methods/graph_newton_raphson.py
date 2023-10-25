@@ -1,11 +1,13 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def plot_newton_raphson_method(f, f_prime, x0, max_iterations, tolerance):
+def plot_newton_raphson_method(f, x0, max_iterations, tolerance):
     # Generate x values for plotting the function
     x = np.linspace(x0 - 10, x0 + 10, 100)
     y = f(x)
 
+    # make lambda function for f_prime
+    f_prime = lambda x: (f(x + 0.0001) - f(x)) / 0.0001
     # Create a figure and axes for the plot
     fig, ax = plt.subplots(figsize=(10, 6)) # Adjust the figsize parameter to set the width and height
 
@@ -24,7 +26,7 @@ def plot_newton_raphson_method(f, f_prime, x0, max_iterations, tolerance):
         x1 = x0 - f(x0) / f_prime(x0)
 
         # Print the iteration details
-        print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, f(x0) = {f(x0):.4f}, f'(x0) = {f_prime(x0):.4f}")
+        # print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, f(x0) = {f(x0):.4f}, f'(x0) = {f_prime(x0):.4f}")
 
         # Plot the estimate with a different color for each iteration
         color = cmap(iteration / max_iterations)

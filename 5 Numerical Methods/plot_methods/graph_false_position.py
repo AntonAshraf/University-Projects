@@ -28,7 +28,7 @@ def plot_false_position_method(f, a, b, max_iterations, tolerance):
         x1 = (a * fb - b * fa) / (fb - fa)
 
         # Print the iteration details
-        print(f"Iteration {iteration+1}: a = {a:.4f}, b = {b:.4f}, x1 = {x1:.4f}, f(a) = {fa:.4f}, f(b) = {fb:.4f}")
+        # print(f"Iteration {iteration+1}: a = {a:.4f}, b = {b:.4f}, x1 = {x1:.4f}, f(a) = {fa:.4f}, f(b) = {fb:.4f}")
 
         # Plot the estimate with a different color for each iteration
         color = cmap(iteration / max_iterations)

@@ -24,7 +24,7 @@ def plot_bisection_method(f, a, b, max_iterations, tolerance):
         c = (a + b) / 2
 
         # Print the iteration details
-        print(f"Iteration {iteration+1}: a = {a:.4f}, b = {b:.4f}, c = {c:.4f}, f(a) = {f(a):.4f}, f(b) = {f(b):.4f}, f(c) = {f(c):.4f}")
+        # print(f"Iteration {iteration+1}: a = {a:.4f}, b = {b:.4f}, c = {c:.4f}, f(a) = {f(a):.4f}, f(b) = {f(b):.4f}, f(c) = {f(c):.4f}")
 
         # Plot the midpoint with a different color for each iteration
         color = cmap(iteration / max_iterations)

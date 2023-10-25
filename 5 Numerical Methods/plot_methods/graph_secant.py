@@ -24,7 +24,7 @@ def plot_secant_method(f, x0, x1, max_iterations, tolerance):
         x2 = x1 - (f(x1) * (x1 - x0)) / (f(x1) - f(x0))
 
         # Print the iteration details
-        print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, x2 = {x2:.4f}, f(x0) = {f(x0):.4f}, f(x1) = {f(x1):.4f}")
+        # print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, x2 = {x2:.4f}, f(x0) = {f(x0):.4f}, f(x1) = {f(x1):.4f}")
 
         # Plot the estimate with a different color for each iteration
         color = cmap(iteration / max_iterations)

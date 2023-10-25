@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import time
 
 def plot_bisection_method(f, a, b, max_iterations, tolerance):
     # Generate x values for plotting the function
@@ -7,7 +8,7 @@ def plot_bisection_method(f, a, b, max_iterations, tolerance):
     y = f(x)
 
     # Create a figure and axes for the plot
-    fig, ax = plt.subplots(figsize=(10, 6))  # Adjust the figsize parameter to set the width and height
+    fig, ax = plt.subplots(figsize=(10, 6))
 
     # Plot the function
     ax.plot(x, y, label='f(x)')
@@ -15,20 +16,42 @@ def plot_bisection_method(f, a, b, max_iterations, tolerance):
     # Initialize the iteration counter
     iteration = 0
 
-    # Define a color map for the points
-    cmap = plt.get_cmap('viridis')
-
     # Perform the Bisection method iterations
     while iteration < max_iterations:
         # Calculate the midpoint
         c = (a + b) / 2
 
-        # Print the iteration details
-        # print(f"Iteration {iteration+1}: a = {a:.4f}, b = {b:.4f}, c = {c:.4f}, f(a) = {f(a):.4f}, f(b) = {f(b):.4f}, f(c) = {f(c):.4f}")
+        # Clear the current plot
+        ax.clear()
+
+        # Plot the function
+        ax.plot(x, y, label='F(x)')
 
         # Plot the midpoint with a different color for each iteration
-        color = cmap(iteration / max_iterations)
+        color = plt.cm.viridis(iteration / max_iterations)
         ax.plot(c, f(c), 'o', color=color, label=f'Iteration {iteration+1}')
+
+        # Plot vertical lines for a and b
+        ax.axvline(a, color='red', linestyle='--', label='a')
+        ax.axvline(b, color='blue', linestyle='--', label='b')
+
+        # Add labels and legend to the plot
+        ax.set_xlabel('x')
+        ax.set_ylabel('F(x)')
+        ax.legend()
+
+        # Add a title and annotation for the root
+        ax.set_title('Bisection Method')
+        ax.annotate(f'Root: x = {c:.4f}', xy=(c, f(c)), xytext=(c, f(c) + 0.5),
+                    arrowprops=dict(facecolor='black', arrowstyle='->'))
+
+        # Show the x and y axes
+        ax.axhline(0, color='black', linewidth=0.5)
+        ax.axvline(0, color='black', linewidth=0.5)
+
+        # Draw the plot
+        plt.draw()
+        plt.pause(1)  # Delay for 1 second
 
         # Check if the root is found
         if np.isclose(f(c), 0) or abs(b - a) < tolerance:
@@ -43,21 +66,7 @@ def plot_bisection_method(f, a, b, max_iterations, tolerance):
         # Increment the iteration counter
         iteration += 1
 
-    # Add labels and legend to the plot
-    ax.set_xlabel('x')
-    ax.set_ylabel('f(x)')
-    ax.legend()
-
-    # Add a title and annotation for the root
-    ax.set_title('Bisection Method')
-    ax.annotate(f'Root: x = {c:.4f}', xy=(c, f(c)), xytext=(c, f(c) + 0.5),
-                arrowprops=dict(facecolor='black', arrowstyle='->'))
-
-    # Show the x and y axes
-    ax.axhline(0, color='black', linewidth=0.5)
-    ax.axvline(0, color='black', linewidth=0.5)
-    
-    # Show the plot
+    # Show the final plot
     plt.show()
     
     

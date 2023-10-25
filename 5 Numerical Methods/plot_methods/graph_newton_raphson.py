@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import time
 
 def plot_newton_raphson_method(f, x0, max_iterations, tolerance):
     # Generate x values for plotting the function
@@ -7,9 +8,10 @@ def plot_newton_raphson_method(f, x0, max_iterations, tolerance):
     y = f(x)
 
     # make lambda function for f_prime
-    f_prime = lambda x: (f(x + 0.0001) - f(x)) / 0.0001
+    f_prime = lambda x: (f(x + tolerance) - f(x)) / tolerance
+
     # Create a figure and axes for the plot
-    fig, ax = plt.subplots(figsize=(10, 6)) # Adjust the figsize parameter to set the width and height
+    fig, ax = plt.subplots(figsize=(10, 6))
 
     # Plot the function
     ax.plot(x, y, label='f(x)')
@@ -17,20 +19,45 @@ def plot_newton_raphson_method(f, x0, max_iterations, tolerance):
     # Initialize the iteration counter
     iteration = 0
 
-    # Define a color map for the points
-    cmap = plt.get_cmap('viridis')
-
     # Perform the Newton-Raphson method iterations
     while iteration < max_iterations:
-        # Calculate the new estimate
-        x1 = x0 - f(x0) / f_prime(x0)
+        # Calculate the function value and derivative at the current estimate
+        fx = f(x0)
+        fpx = f_prime(x0)
 
-        # Print the iteration details
-        # print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, f(x0) = {f(x0):.4f}, f'(x0) = {f_prime(x0):.4f}")
+        # Calculate the new estimate
+        x1 = x0 - fx / fpx
+
+        # Clear the current plot
+        ax.clear()
+
+        # Plot the function
+        ax.plot(x, y, label='F(x)')
 
         # Plot the estimate with a different color for each iteration
-        color = cmap(iteration / max_iterations)
-        ax.plot(x1, f(x1), 'o', color=color, label=f'Iteration {iteration+1}')
+        color = plt.cm.viridis(iteration / max_iterations)
+        ax.plot(x1, f(x1), 'o', color=color, label=f'Iteration {iteration}')
+
+        # Plot vertical line for the estimated root
+        ax.axvline(x1, color='red', linestyle='--', label='Estimated Root')
+
+        # Add labels and legend to the plot
+        ax.set_xlabel('x')
+        ax.set_ylabel('f(x)')
+        ax.legend()
+
+        # Add a title and annotation for the root
+        ax.set_title('Newton-Raphson Method')
+        ax.annotate(f'Root: x = {x1:.4f}', xy=(x1, f(x1)), xytext=(x1, f(x1) + 0.5),
+                    arrowprops=dict(facecolor='black', arrowstyle='->'))
+
+        # Show the x and y axes
+        ax.axhline(0, color='black', linewidth=0.5)
+        ax.axvline(0, color='black', linewidth=0.5)
+
+        # Draw the plot
+        plt.draw()
+        plt.pause(1)  # Delay for 1 second
 
         # Check if the root is found
         if np.isclose(f(x1), 0) or abs(x1 - x0) < tolerance:
@@ -42,21 +69,7 @@ def plot_newton_raphson_method(f, x0, max_iterations, tolerance):
         # Increment the iteration counter
         iteration += 1
 
-    # Add labels and legend to the plot
-    ax.set_xlabel('x')
-    ax.set_ylabel('f(x)')
-    ax.legend()
-
-    # Add a title and annotation for the root
-    ax.set_title('Newton-Raphson Method')
-    ax.annotate(f'Root: x = {x1:.4f}', xy=(x1, f(x1)), xytext=(x1, f(x1) + 0.5),
-    arrowprops=dict(facecolor='black', arrowstyle='->'))
-
-    # Show the x and y axes
-    ax.axhline(0, color='black', linewidth=0.5)
-    ax.axvline(0, color='black', linewidth=0.5)
-
-    # Show the plot
+    # Show the final plot
     plt.show()
 
 if __name__ == '__main__':

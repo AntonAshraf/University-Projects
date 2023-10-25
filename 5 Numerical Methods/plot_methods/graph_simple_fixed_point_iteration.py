@@ -1,37 +1,59 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import time
 
-def plot_simple_fixed_point_iteration(f, g, x0, max_iterations, tolerance):
+def plot_simple_fixed_point_iteration(g, x0, max_iterations, tolerance):
     # Generate x values for plotting the function
     x = np.linspace(x0 - 10, x0 + 10, 100)
-    y = f(x)
+    y = g(x)
 
     # Create a figure and axes for the plot
-    fig, ax = plt.subplots(figsize=(10, 6)) # Adjust the figsize parameter to set the width and height
+    fig, ax = plt.subplots(figsize=(10, 6))
 
     # Plot the function
-    ax.plot(x, y, label='f(x)')
+    ax.plot(x, y, label='g(x)')
 
     # Initialize the iteration counter
     iteration = 0
 
-    # Define a color map for the points
-    cmap = plt.get_cmap('viridis')
-
-    # Perform the Simple Fixed-Point Iteration method iterations
+    # Perform the Fixed-Point method iterations
     while iteration < max_iterations:
         # Calculate the new estimate
         x1 = g(x0)
 
-        # Print the iteration details
-        # print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, f(x0) = {f(x0):.4f}")
+        # Clear the current plot
+        ax.clear()
+
+        # Plot the function
+        ax.plot(x, y, label='G(x)')
 
         # Plot the estimate with a different color for each iteration
-        color = cmap(iteration / max_iterations)
-        ax.scatter(x1, f(x1), color=color, label=f'Iteration {iteration+1}')
+        color = plt.cm.viridis(iteration / max_iterations)
+        ax.plot(x1, g(x1), 'o', color=color, label=f'Iteration {iteration+1}')
+
+        # Plot vertical line for the estimated root
+        ax.axvline(x1, color='red', linestyle='--', label='Estimated Root')
+
+        # Add labels and legend to the plot
+        ax.set_xlabel('x')
+        ax.set_ylabel('g(x)')
+        ax.legend()
+
+        # Add a title and annotation for the root
+        ax.set_title('Fixed-Point Method')
+        ax.annotate(f'Root: x = {x1:.4f}', xy=(x1, g(x1)), xytext=(x1, g(x1) + 0.5),
+                    arrowprops=dict(facecolor='black', arrowstyle='->'))
+
+        # Show the x and y axes
+        ax.axhline(0, color='black', linewidth=0.5)
+        ax.axvline(0, color='black', linewidth=0.5)
+
+        # Draw the plot
+        plt.draw()
+        # plt.pause(1)  # Delay for 1 second
 
         # Check if the root is found
-        if np.isclose(f(x1), 0) or abs(x1 - x0) < tolerance:
+        if abs(x1 - x0) < tolerance:
             break
 
         # Update the estimate
@@ -40,21 +62,7 @@ def plot_simple_fixed_point_iteration(f, g, x0, max_iterations, tolerance):
         # Increment the iteration counter
         iteration += 1
 
-    # Add labels and legend to the plot
-    ax.set_xlabel('x')
-    ax.set_ylabel('f(x)')
-    ax.legend()
-
-    # Add a title and annotation for the root
-    ax.set_title('Simple Fixed-Point Iteration Method')
-    ax.annotate(f'Root: x = {x1:.4f}', xy=(x1, f(x1)), xytext=(x1, f(x1) + 0.5),
-    arrowprops=dict(facecolor='black', arrowstyle='->'))
-
-    # Show the x and y axes
-    ax.axhline(0, color='black', linewidth=0.5)
-    ax.axvline(0, color='black', linewidth=0.5)
-
-    # Show the plot
+    # Show the final plot
     plt.show()
     
 if __name__ == '__main__':
@@ -66,10 +74,10 @@ if __name__ == '__main__':
     x0 = 1
 
     # Set the maximum number of iterations
-    max_iterations = 10
+    max_iterations = 100
 
     # Set the tolerance
     tolerance = 1e-4
 
     # Plot the function and the iterations
-    plot_simple_fixed_point_iteration(f, g, x0, max_iterations, tolerance)
+    plot_simple_fixed_point_iteration(g, x0, max_iterations, tolerance)

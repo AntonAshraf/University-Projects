@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import time
 
 def plot_secant_method(f, x0, x1, max_iterations, tolerance):
     # Generate x values for plotting the function
@@ -7,28 +8,54 @@ def plot_secant_method(f, x0, x1, max_iterations, tolerance):
     y = f(x)
 
     # Create a figure and axes for the plot
-    fig, ax = plt.subplots(figsize=(10, 6)) # Adjust the figsize parameter to set the width and height
+    fig, ax = plt.subplots(figsize=(10, 6))
 
     # Plot the function
-    ax.plot(x, y, label='f(x)')
+    ax.plot(x, y, label='F(x)')
 
     # Initialize the iteration counter
     iteration = 0
 
-    # Define a color map for the points
-    cmap = plt.get_cmap('viridis')
-
     # Perform the Secant method iterations
     while iteration < max_iterations:
-        # Calculate the new estimate
-        x2 = x1 - (f(x1) * (x1 - x0)) / (f(x1) - f(x0))
+        # Calculate the function values at the endpoints
+        f0 = f(x0)
+        f1 = f(x1)
 
-        # Print the iteration details
-        # print(f"Iteration {iteration+1}: x0 = {x0:.4f}, x1 = {x1:.4f}, x2 = {x2:.4f}, f(x0) = {f(x0):.4f}, f(x1) = {f(x1):.4f}")
+        # Calculate the new estimate
+        x2 = x1 - (f1 * (x1 - x0)) / (f1 - f0)
+
+        # Clear the current plot
+        ax.clear()
+
+        # Plot the function
+        ax.plot(x, y, label='f(x)')
 
         # Plot the estimate with a different color for each iteration
-        color = cmap(iteration / max_iterations)
-        ax.scatter(x2, f(x2), color=color, label=f'Iteration {iteration+1}')
+        color = plt.cm.viridis(iteration / max_iterations)
+        ax.plot(x2, f(x2), 'o', color=color, label=f'Iteration {iteration+1}')
+
+        # Plot vertical lines for x0 and x1
+        ax.axvline(x0, color='red', linestyle='--', label='x0')
+        ax.axvline(x1, color='blue', linestyle='--', label='x1')
+
+        # Add labels and legend to the plot
+        ax.set_xlabel('x')
+        ax.set_ylabel('f(x)')
+        ax.legend()
+
+        # Add a title and annotation for the root
+        ax.set_title('Secant Method')
+        ax.annotate(f'Root: x = {x2:.4f}', xy=(x2, f(x2)), xytext=(x2, f(x2) + 0.5),
+                    arrowprops=dict(facecolor='black', arrowstyle='->'))
+
+        # Show the x and y axes
+        ax.axhline(0, color='black', linewidth=0.5)
+        ax.axvline(0, color='black', linewidth=0.5)
+
+        # Draw the plot
+        plt.draw()
+        plt.pause(1)  # Delay for 1 second
 
         # Check if the root is found
         if np.isclose(f(x2), 0) or abs(x2 - x1) < tolerance:
@@ -41,21 +68,7 @@ def plot_secant_method(f, x0, x1, max_iterations, tolerance):
         # Increment the iteration counter
         iteration += 1
 
-    # Add labels and legend to the plot
-    ax.set_xlabel('x')
-    ax.set_ylabel('f(x)')
-    ax.legend()
-
-    # Add a title and annotation for the root
-    ax.set_title('Secant Method')
-    ax.annotate(f'Root: x = {x2:.4f}', xy=(x2, f(x2)), xytext=(x2, f(x2) + 0.5),
-    arrowprops=dict(facecolor='black', arrowstyle='->'))
-
-    # Show the x and y axes
-    ax.axhline(0, color='black', linewidth=0.5)
-    ax.axvline(0, color='black', linewidth=0.5)
-
-    # Show the plot
+    # Show the final plot
     plt.show()
     
 if __name__ == '__main__':

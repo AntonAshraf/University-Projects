@@ -1,6 +1,8 @@
 from tkinter import *
 import tkinter as tk
 from calculations import calculate_root, clear_results
+import matplotlib as plt
+import sys
 
 # Define the function for changing the labels based on the selected method
 def on_method_change(*args, method_var, a_label, b_label, b_entry):
@@ -126,7 +128,7 @@ def create_gui(root):
     root.grid_columnconfigure(4, weight=1)
 
     # if root destroyed, destroy all other windows and exit and stop plotting
-    root.protocol("WM_DELETE_WINDOW", lambda: [root.destroy(), plt.close('all'), sys.exit()])
+    root.protocol("WM_DELETE_WINDOW", lambda: [root.destroy(), plt.pyplot.close("all"), sys.exit()])
     
     root.mainloop()
 

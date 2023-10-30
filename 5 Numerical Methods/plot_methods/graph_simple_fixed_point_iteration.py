@@ -5,7 +5,8 @@ import time
 def plot_simple_fixed_point_iteration(g, x0, max_iterations, tolerance):
     # Generate x values for plotting the function
     x = np.linspace(x0 - 10, x0 + 10, 100)
-    y = g(x)
+    y = np.array([f(xi) for xi in x])
+
 
     # Create a figure and axes for the plot
     fig, ax = plt.subplots(figsize=(10, 6))

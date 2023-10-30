@@ -5,7 +5,8 @@ import time
 def plot_false_position_method(f, a, b, max_iterations, tolerance):
     # Generate x values for plotting the function
     x = np.linspace(a - 10, b + 10, 100)
-    y = f(x)
+    y = np.array([f(xi) for xi in x])
+
 
     # Create a figure and axes for the plot
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -58,7 +59,7 @@ def plot_false_position_method(f, a, b, max_iterations, tolerance):
         plt.pause(1)  # Delay for 1 second
 
         # Check if the root is found
-        if np.isclose(f(x1), 0) or abs(x1 - a) < tolerance:
+        if abs(x1 - a) < tolerance:
             break
 
         # Update the interval based on the sign of f(x1)

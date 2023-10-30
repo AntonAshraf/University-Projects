@@ -2,6 +2,8 @@ import re
 from tkinter import *
 import tkinter as tk
 import matplotlib.pyplot as plt
+import sympy
+import numpy as np
 
 from methods.bisection import bisection
 from methods.false_position import false_position
@@ -72,7 +74,8 @@ def calculate_root(root, method_var, expression_entry, tolerance_entry, max_iter
     equation = user_entry.replace("^", "**")  # Replace "^" with "**"
     # Replace "2x" with "2*x"
     modified_input = re.sub(pattern, replace, equation)
-    def f(x): return eval(modified_input)
+    def f(x): return sympy.sympify(modified_input).subs('x', x)
+    # def f(x): return eval(modified_input)
 
     try:
         a = a_entry.get()

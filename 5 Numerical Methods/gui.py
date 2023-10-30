@@ -125,6 +125,9 @@ def create_gui(root):
     root.grid_columnconfigure(0, weight=1)
     root.grid_columnconfigure(4, weight=1)
 
+    # if root destroyed, destroy all other windows and exit and stop plotting
+    root.protocol("WM_DELETE_WINDOW", lambda: [root.destroy(), plt.close('all'), sys.exit()])
+    
     root.mainloop()
 
 if __name__ == '__main__':

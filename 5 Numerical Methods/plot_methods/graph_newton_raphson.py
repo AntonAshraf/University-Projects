@@ -5,7 +5,8 @@ import time
 def plot_newton_raphson_method(f, x0, max_iterations, tolerance):
     # Generate x values for plotting the function
     x = np.linspace(x0 - 10, x0 + 10, 100)
-    y = f(x)
+    y = np.array([f(xi) for xi in x])
+
 
     # make lambda function for f_prime
     f_prime = lambda x: (f(x + tolerance) - f(x)) / tolerance
@@ -60,7 +61,7 @@ def plot_newton_raphson_method(f, x0, max_iterations, tolerance):
         plt.pause(1)  # Delay for 1 second
 
         # Check if the root is found
-        if np.isclose(f(x1), 0) or abs(x1 - x0) < tolerance:
+        if abs(x1 - x0) < tolerance:
             break
 
         # Update the estimate

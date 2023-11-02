@@ -1,10 +1,16 @@
 # Numerical Methods Calculator
 
 This is a Python program that implements various numerical methods for finding roots of equations. It provides a graphical user interface (GUI) built using the Tkinter library.
+To have a local test without installing the dependencies, you can **Download** the executable file from _[here](https://drive.google.com/file/d/1EDOGNFoxFUou9Hp3Du2oVkKoiXEK0PvL/view?usp=sharing)_ ⬇️
+
+## _Main Program Demo_
+![video](https://github.com/AntonAshraf/Materials/blob/main/Numerical/NumericalProject.gif)
 
 ## Prerequisites
 
 - Python 3.8 or higher
+- Matplotlib library
+- Sympy library
 - Tkinter library
 
 ## Installation
@@ -41,6 +47,15 @@ The program supports the following numerical methods:
 - Simple Fixed-Point Iteration
 
 Each method has different requirements for input parameters. Make sure to fill in the appropriate fields based on the selected method.
+
+### More examples for the Application
+
+##### Main Window
+![Main Window](https://github.com/AntonAshraf/Materials/blob/main/Numerical/main_window.png)
+##### Steps of Iterations
+![Steps Window](https://github.com/AntonAshraf/Materials/blob/main/Numerical/stepsOfIteration.png)
+##### Plotting Bisection
+![Plotting](https://github.com/AntonAshraf/Materials/blob/main/Numerical/Plotting.gif)
 
 ## Contributing
 

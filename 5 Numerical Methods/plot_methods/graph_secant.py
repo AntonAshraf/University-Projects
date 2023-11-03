@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import time
+import matplotlib.backends.backend_tkagg
+plt.switch_backend("TkAgg")
 
 def plot_secant_method(f, x0, x1, max_iterations, tolerance):
     # Generate x values for plotting the function

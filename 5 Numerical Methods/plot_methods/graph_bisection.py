@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.backends.backend_tkagg
+plt.switch_backend("TkAgg")
 
 def plot_bisection_method(f, a, b, max_iterations, tolerance):
     # Generate x values for plotting the function

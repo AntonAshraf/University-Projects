@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import time
+import matplotlib.backends.backend_tkagg
+plt.switch_backend("TkAgg")
 
 def plot_simple_fixed_point_iteration(g, x0, max_iterations, tolerance):
     # Generate x values for plotting the function

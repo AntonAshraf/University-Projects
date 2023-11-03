@@ -23,7 +23,7 @@ def on_method_change(*args, method_var, a_label, b_label, b_entry):
 
 def create_gui(root):
 
-    root.title("Numerical Methods Calculator")
+    root.title("Numerical Methods Calculator - Anton Ashraf")
     root.geometry("700x400")
 
     # Create a grid layout

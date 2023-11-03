@@ -115,6 +115,15 @@ def calculate_root(root, method_var, expression_entry, tolerance_entry, max_iter
         try:
             result, error, msg, steps_text = simple_fixed_point_iteration(
                 f, a, float(tolerance), int(max_iterations))
+            if result > 1e5 or result < -1e5 or error > 1e5 or error < -1e5:
+                result_label.config(
+                    text="Overflow error: The result is too large", fg="red")
+                error_label.config(text="")
+                info_label.config(text="")
+                return
+            # 6 decimal places
+            result = round(result, 6)
+            error = round(error, 6)
         except OverflowError:
             result_label.config(
                 text="Overflow error: The result is too large", fg="red")

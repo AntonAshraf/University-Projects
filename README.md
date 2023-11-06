@@ -64,7 +64,7 @@ This repository containg many awsome blocks of code that I have learnt too much 
       - Backend done by Maven Project
       - _Page Flow Diagram_
 
-6. ###### [Numerical Project](https://github.com/AntonAshraf/University-Projects/tree/main/5%20Numerical%20Methods) "Numerical Methods" __Term 7__
+6. ###### [Numerical Project](https://github.com/AntonAshraf/Numerical-Calculator) "Numerical Methods" __Term 7__
    - A project that implements numerical methods to solve mathematical problems
      
      - Root finding methods

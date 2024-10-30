@@ -96,8 +96,16 @@ This repository containg many awsome blocks of code that I have learnt too much 
 
 9. ###### [TrashFall Game](https://github.com/AntonAshraf/TrashFall-game.git) "Computer Graphics" __Term 8__
   
-  - Trashfall Game is an addictive 2D arcade game developed using Python and Pygame
+    - Trashfall Game is an addictive 2D arcade game developed using Python and Pygame
     - The game involves catching falling trash in a bin.
     - The player controls the bin using the arrow keys.
     - The game features multiple levels with increasing difficulty.
     - Includes a high score system to track player progress.
+
+10. ###### [Smart-Home-PIC16f877A](https://github.com/AntonAshraf/Smart-Home-PIC16f877A.git) "Data Acquisition" __Term 8__
+
+    - RFID based door lock
+    - Fire alarm system
+    - Theft detection system with laser security with alarm
+    - Screen status display
+    - Indication of status with LEDs
